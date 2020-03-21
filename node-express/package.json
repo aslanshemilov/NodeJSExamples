@@ -8,5 +8,8 @@
     "start": "node index"
   },
   "author": "Shilpa Kancharla",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "morgan": "^1.10.0"
+  }
 }
