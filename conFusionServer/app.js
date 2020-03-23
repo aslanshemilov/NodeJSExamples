@@ -30,9 +30,13 @@ const Dishes = require('./models/dishes');
 const url = 'mongodb://localhost:27107/conFusion';
 const connect = mongoose.connect(url);
 
+const uploadRouter = require('./routes/uploadRouter');
+
 connect.then((db) => {
   console.log("Connected correctly to server");
 }, (err) => { console.log(err); });
+
+app.use('/imageUpload', uploadRouter);
 
 app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
